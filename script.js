@@ -686,10 +686,10 @@ if (contactForm) {
     submitBtn.disabled = true;
 
     // 1️⃣ Send notification email (to you)
-    emailjs.sendForm("service_va4luii", "template_6c967hv", this)
+    emailjs.sendForm("service_va4luii", "template_hv8vo3e", this)
       .then(() => {
         // 2️⃣ Send auto-reply email (to user)
-        return emailjs.sendForm("service_va4luii", "template_08nbffa", this);
+        return emailjs.sendForm("service_va4luii", "template_l8huu3j", this);
       })
       .then(() => {
         alert("✅ Message sent successfully! An auto-reply has been sent to your inbox.");
