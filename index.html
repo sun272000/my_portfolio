@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>b1swa | Security Specialist & Developer</title>
+    <meta
+      name="description"
+      content="Senior Security Specialist, Developer, and Technology Leader. Expert in cybersecurity, penetration testing, and secure application development."
+    />
+    <meta
+      name="keywords"
+      content="security specialist, cyber security expert, penetration testing, ethical hacking, web development, technology leader"
+    />
+    <meta name="theme-color" content="#00FF00" />
+
+    <!-- Social Meta Tags -->
+    <meta
+      property="og:title"
+      content="b1swa | Security Specialist & Developer"
+    />
+    <meta
+      property="og:description"
+      content="Senior Security Specialist, Developer, and Technology Leader"
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%2300FF41' d='M4 4h16v2H4zm0 4h16v2H4zm0 4h16v2H4zm0 4h16v2H4z'/%3E%3C/svg%3E"
+    />
+
+    <!-- Fonts and Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Source+Code+Pro:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Matrix Background -->
+    <canvas class="matrix-bg" id="matrixCanvas"></canvas>
+
+    <!-- Common Loader -->
+    <div class="common-loader" id="commonLoader">
+      <div class="common-loader-content">
+        <div class="terminal">
+          <div class="terminal-header">
+            <div
+              class="terminal-button"
+              style="background-color: #ff5f56"
+            ></div>
+            <div
+              class="terminal-button"
+              style="background-color: #ffbd2e"
+            ></div>
+            <div
+              class="terminal-button"
+              style="background-color: #27c93f"
+            ></div>
+            <div class="terminal-title">b1swa@portfolio:~</div>
+          </div>
+          <div class="terminal-body">
+            <p class="status-line">> Initializing system...</p>
+            <p class="status-line">> Loading portfolio components...</p>
+            <p class="status-line">> Establishing secure connection...</p>
+            <p class="status-line">
+              > Welcome to the portfolio of
+              <span style="color: var(--primary)">b1swa</span>
+            </p>
+            <div class="progress-bar">
+              <div class="progress" id="commonLoaderProgress"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- View Selection Screen -->
+    <div class="view-selector" id="viewSelector">
+      <div class="selector-content">
+        <h1 class="selector-title">b1swa.portfolio</h1>
+        <p class="selector-subtitle">
+          Choose your preferred interface experience
+        </p>
+        <div class="view-options">
+          <div class="view-option" id="terminalOption">
+            <div class="option-icon">
+              <i class="fas fa-terminal"></i>
+            </div>
+            <h3 class="option-title">Terminal Mode</h3>
+            <p class="option-description">
+              Experience an authentic terminal interface with command-line
+              navigation, ASCII art graphics, and real-time command processing.
+            </p>
+          </div>
+          <div class="view-option" id="guiOption">
+            <div class="option-icon">
+              <i class="fas fa-desktop"></i>
+            </div>
+            <h3 class="option-title">GUI Mode</h3>
+            <p class="option-description">
+              Browse through a modern graphical interface with smooth
+              animations, interactive elements, and traditional web navigation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Terminal Interface -->
+    <div class="terminal-interface terminal-mode" id="terminalInterface">
+      <div class="terminal-top-bar">
+        <div class="terminal-window-controls">
+          <div
+            class="terminal-window-button"
+            style="background-color: #ff5f56"
+            id="closeTerminal"
+          ></div>
+          <div
+            class="terminal-window-button"
+            style="background-color: #ffbd2e"
+            id="minimizeTerminal"
+          ></div>
+          <div
+            class="terminal-window-button"
+            style="background-color: #27c93f"
+            id="maximizeTerminal"
+          ></div>
+        </div>
+        <div class="terminal-window-title">b1swa@portfolio:~</div>
+        <div style="width: 60px"></div>
+      </div>
+      <div class="terminal-content" id="terminalContent">
+        <div class="terminal-output">
+                    <div class="ascii-art">                               
+       _     _                   
+      | |__ / |_____      ____ _ 
+      | '_ \| / __\ \ /\ / / _` |
+      | |_) | \__ \\ V  V / (_| |
+      |_.__/|_|___/ \_/\_/ \__,_|
+                                                              
+    ██  SECURITY SPECIALIST TERMINAL  ██
+    ██         b1swa@portfolio       ██  
+</div>
+          <div style="color: var(--success)">[INFO] Terminal initialized successfully
+          </div>
+          <div>System: Kali Linux 2025.4 (Terminal Portfolio v2.0)</div>
+          <div>Type 'pf -help' for available commands</div>
+          <div>Use 'clear' to clear screen, 'pf -gui' to switch to GUI mode
+          </div>
+        </div>
+        <div class="terminal-input-container" id="currentInput">
+          <span class="terminal-prompt">b1swa@portfolio:~$</span>
+          <input
+            type="text"
+            class="terminal-input"
+            id="terminalInput"
+            autocomplete="off"
+            spellcheck="false"
+          />
+          <span class="terminal-cursor"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- GUI Interface -->
+    <div class="gui-interface gui-mode" id="guiInterface">
+      <!-- Navigation -->
+      <header>
+        <div class="container">
+          <nav>
+            <a href="#" class="logo">
+              <i class="fas fa-terminal"></i>
+              <span>b1swa</span>
+            </a>
+            <ul class="nav-links">
+              <li><a href="#about" class="active">About</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li>
+                <a href="#" id="switchToTerminal" style="color: var(--warning)"
+                  >Terminal</a
+                >
+              </li>
+            </ul>
+            <button class="hamburger">
+              <i class="fas fa-bars"></i>
+            </button>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Enhanced Hero Section -->
+      <section class="hero">
+        <div class="grid-overlay"></div>
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-profile">
+              <div class="hero-img-wrapper">
+                <div class="profile-img">
+                  <i class="fas fa-user-secret"></i>
+                </div>
+              </div>
+            </div>
+            <h1 class="hero-name">b1swa</h1>
+            <div class="hero-title-container">
+              <h2 class="hero-title" id="typed-text"></h2>
+              <span class="typed-cursor">|</span>
+            </div>
+            <p class="hero-description">
+              I'm building secure applications using my full stack development,
+              web security, and penetration testing skills.
+            </p>
+            <div class="hero-buttons">
+              <a href="#projects" class="btn btn-primary">
+                <i class="fas fa-code"></i> View Projects
+              </a>
+              <a href="#contact" class="btn btn-outline">
+                <i class="fas fa-envelope"></i> Contact Me
+              </a>
+            </div>
+            <div class="hero-stats">
+              <div class="stat-item">
+                <i class="fas fa-project-diagram stat-icon"></i>
+                <span class="stat-number">03+</span>
+                <span class="stat-label">&emsp;&emsp;Projects&emsp;&emsp;</span>
+              </div>
+              <div class="stat-item">
+                <i class="fas fa-users stat-icon"></i>
+                <span class="stat-number">01+</span>
+                <span class="stat-label">&emsp;&emsp;Clients&emsp;&emsp;</span>
+              </div>
+              <div class="stat-item">
+                <i class="fas fa-award stat-icon"></i>
+                <span class="stat-number">06+</span>
+                <span class="stat-label">Certifications</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-indicator">
+          <div class="mouse">
+            <div class="wheel"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about">
+        <div class="container">
+          <div class="section-title">
+            <h2>About Me</h2>
+            <p>Get to know me better</p>
+          </div>
+          <div class="about-content">
+            <div class="about-text">
+              <h3>Full Stack Developer & Penetration Tester</h3>
+              <p>
+                I am a Full Stack Developer and Certified Ethical Hacker with
+                specialized expertise in Web Security & Penetration Testing. My
+                unique combination of development skills and security knowledge
+                allows me to build robust web applications with security
+                integrated at every layer of the technology stack.
+              </p>
+              <p>
+                With experience in both creating software and ethically breaking
+                it, I implement security best practices during development while
+                proactively identifying vulnerabilities through comprehensive
+                penetration testing. This dual perspective enables me to deliver
+                solutions that are not just functional, but fundamentally secure
+                by design.
+              </p>
+              <p>
+                My technical approach combines modern web development frameworks
+                with offensive security methodologies to create applications
+                that withstand real-world threats while maintaining optimal
+                performance and user experience.
+              </p>
+              <div class="about-stats">
+                <div class="about-stat">
+                  <i class="fas fa-code"></i>
+                  <h4>Development</h4>
+                  <p>Full-Stack Developer</p>
+                </div>
+                <div class="about-stat">
+                  <i class="fas fa-bug"></i>
+                  <h4>Testing</h4>
+                  <p>Ethical Hacker</p>
+                </div>
+                <div class="about-stat">
+                  <i class="fas fa-shield-alt"></i>
+                  <h4>Security</h4>
+                  <p>Cybersecurity Expert</p>
+                </div>
+              </div>
+            </div>
+            <div class="about-image">
+              <div class="about-image-wrapper">
+                <img
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%230D0208'/%3E%3Cpath d='M150 70 L220 130 L180 190 L120 190 L80 130 Z' fill='%2300FF41'/%3E%3Ccircle cx='150' cy='130' r='30' fill='%230A0A0A'/%3E%3C/svg%3E"
+                  alt="sh1vam"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills">
+        <div class="container">
+          <div class="section-title">
+            <h2>Skills & Expertise</h2>
+            <p>What I bring to the table</p>
+          </div>
+          <div class="skills-content">
+            <div class="skill-category">
+              <h3><i class="fas fa-shield-alt"></i> Security</h3>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <h4>VAPT</h4>
+                  <span>63%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-level" data-level="63"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <h4>Web Security</h4>
+                  <span>54%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-level" data-level="54"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <h4>Network Security</h4>
+                  <span>36%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-level" data-level="36"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <h4>Cryptography</h4>
+                  <span>02%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-level" data-level="2"></div>
+                </div>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3><i class="fas fa-code"></i> Development</h3>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <h4>Python</h4>
+                  <span>69%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-level" data-level="69"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <h4>JavaScript/Node.js</h4>
+                  <span>63%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-level" data-level="63"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <h4>React</h4>
+                  <span>59%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-level" data-level="59"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <h4>Databases</h4>
+                  <span>39%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-level" data-level="39"></div>
+                </div>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <h4>Kali Linux</h4>
+                  <span>93%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-level" data-level="93"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <h4>Burp Suite</h4>
+                  <span>86%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-level" data-level="86"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <h4>Metasploit</h4>
+                  <span>54%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-level" data-level="54"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <h4>Wireshark</h4>
+                  <span>53%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-level" data-level="53"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects">
+        <div class="container">
+          <div class="section-title">
+            <h2>Projects</h2>
+            <p>Some of my recent work</p>
+          </div>
+          <div class="projects-grid">
+            <!--First Project-->
+            <div class="project-card">
+              <div class="project-img">
+                <img
+                  src="https://github.com/user-attachments/assets/c0180a09-7ceb-4e0f-ad53-d9dbee4cc52c"
+                  alt="GitMan - GitHub Dorking URL Generator"
+                />
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">
+                  GitMan - GitHub Dorking URL Generator
+                </h3>
+                <p class="project-description">
+                  A tool for security researchers, penetration testers, and bug
+                  bounty hunters to identify potentially sensitive or exposed
+                  data within public GitHub repositories using GitHub dorking
+                  techniques.
+                </p>
+                <div class="project-tech">
+                  <span>Python</span>
+                  <span>GitHub Dorking</span>
+                  <span>CLI</span>
+                  <span>Security Research</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/sun272000/gitman"
+                    ><i class="fab fa-github"></i> GitHub</a
+                  >
+                  <a
+                    href="https://github.com/sun272000/gitman?tab=readme-ov-file#gitman---%EF%B8%8F-github-dorking-url-generator-%EF%B8%8F"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <i class="fas fa-book"></i> Readme
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!--Second Project-->
+            <div class="project-card">
+              <div class="project-img">
+                <!-- Inline SVG placeholder -->
+                <img
+                  src="https://github.com/user-attachments/assets/51274bb0-a1db-46d0-b71c-4ddd0d0d66e2"
+                  alt="WhatsApp Spammer"
+                />
+              </div>
+
+              <div class="project-content">
+                <h3 class="project-title">WA-Spam — WhatsApp, Snapchat, etc Spammer</h3>
+
+                <p class="project-description">
+                  A Python-based terminal tool that allows sending user-typed or
+                  auto-generated messages on WhatsApp. Includes random message
+                  generation, counting, and other flexible spamming options for
+                  educational purposes only.
+                </p>
+
+                <div class="project-tech">
+                  <span>Python</span>
+                  <span>CLI</span>
+                  <span>Automation</span>
+                  <span>Terminal Tool</span>
+                </div>
+
+                <div class="project-links">
+                  <a
+                    href="https://github.com/sun272000/WhatsApp-Spammer"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+                  <a
+                    href="https://github.com/sun272000/WhatsApp-Spammer#usage"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <i class="fas fa-book"></i> Readme
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!--Third Project-->
+            <div class="project-card">
+              <div class="project-img">
+                <!-- Placeholder SVG for Tabsye -->
+                <img
+                  src="https://github.com/user-attachments/assets/a595befd-1098-4408-b440-bb66c8e03c1f"
+                  alt="Tabsye QR Ordering System"
+                />
+              </div>
+
+              <div class="project-content">
+                <h3 class="project-title">Tabsye — QR-Based Ordering System</h3>
+
+                <p class="project-description">
+                  A modern restaurant ordering platform using QR codes for
+                  seamless table orders. Currently in development, Tabsye aims
+                  to provide live menu updates, order tracking, inventory
+                  management, etc for optimized service.
+                </p>
+
+                <div class="project-tech">
+                  <span>Next.js</span>
+                  <span>Tailwind CSS</span>
+                  <span>PostgreSQL</span>
+                  <span>Web Security</span>
+                </div>
+
+                <div class="project-links">
+                  <!-- GitHub repo link (replace with actual link if available) -->
+                  <a
+                    href="https://github.com/sun272000"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+                  <!-- Live demo disabled for development -->
+                  <a href="https://tabsye.com" target="_blank" rel="noopener">
+                    <i class="fas fa-external-link-alt"></i> Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact">
+        <div class="container">
+          <div class="section-title">
+            <h2>Contact Me</h2>
+            <p>Let's work together</p>
+          </div>
+          <div class="contact-content">
+            <div class="contact-info">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Email</h4>
+                  <a href="mailto:l1acker03@gmail.com">sandipbiswa2000@gmail.com</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Phone</h4>
+                  <a href="tel:+9175177514XX">+975-17******</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Address</h4>
+                  <p>192.168.119.12</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Availability</h4>
+                  <p>Currently available for freelance projects</p>
+                </div>
+              </div>
+            </div>
+            <div class="contact-form">
+              <form id="contactForm">
+                <div class="form-group">
+                  <label for="name">Full Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="from_name"
+                    class="form-control"
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="from_email"
+                    class="form-control"
+                    placeholder="Your Email"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="subject">Subject</label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    class="form-control"
+                    placeholder="Subject"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="form-control"
+                    placeholder="Your Message"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                  <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <div class="container">
+          <div class="footer-content">
+            <div class="social-links">
+              <a href="https://tinyurl.com/p8txj8j2"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="https://tinyurl.com/3m4hfadw"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </div>
+            <div class="footer-links">
+              <a href="#about">About</a>
+              <a href="#skills">Skills</a>
+              <a href="#projects">Projects</a>
+              <a href="#contact">Contact</a>
+            </div>
+            <p class="copyright">© 2025 b1swa. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+    <!-- EmailJS script -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  </body>
+</html>
