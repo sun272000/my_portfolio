@@ -253,20 +253,26 @@ exit         - Return to mode selection`;
 
 const aboutContent = `${aboutAscii}
 
-b1swa - Full-Stack Developer | Web Security & Penetration Tester
+b1swa - Security Specialist
 
-I'm building secure applications using my full stack development, web security, and penetration testing skills.
+I’m a proud son. My future kids are my greatest assets, and I must protect them.
 
-I am a Full Stack Developer and Ethical Hacker with specialized expertise in Web Security & Penetration Testing. My unique combination of development skills and security knowledge allows me to build robust web applications with security integrated at every layer of the technology stack.
+There are many threats, risks, and vulnerabilities that could affect them.
 
-With experience in both creating software and ethically breaking it, I implement security best practices during development while proactively identifying vulnerabilities through comprehensive penetration testing. This dual perspective enables me to deliver solutions that are not just functional, but fundamentally secure by design.
+As a security professional, my duty is to protect the information I’m responsible for from these threats, risks, and vulnerabilities.
 
-My technical approach combines modern web development frameworks with offensive security methodologies to create applications that withstand real-world threats while maintaining optimal performance and user experience.
+In the field of security, issues and incidents (“fires”) will inevitably occur.
+
+It’s important to keep operations running smoothly despite these challenges. When necessary, I must escalate issues —
+
+    either to the appropriate technical team, or
+
+    up the management chain to find a resolution.
 
 Stats:
 - 03+ Projects Completed
 - 01+ Satisfied Clients
-- 02+ Professional Certifications`;
+- 06+ Professional Certifications`;
             this.addOutput(aboutContent);
           }
 
@@ -291,13 +297,13 @@ Security:
 
 Development:
 ██████████████████        69% Python
-████████████████          63% JS/Node.js
+████████████              43% JS/Node.js
 ███████████████           59% React
-██████████                39% Databases
+████████                  32% Databases
 
 Tools & Technologies:
-████████████████████████  93% Kali Linux
-██████████████████████    86% Burp Suite
+████████████████████████  83% Kali Linux
+██████████                33% Burp Suite
 ██████████████            54% Metasploit
 ██████████████            53% Wireshark`;
             this.addOutput(skillsContent);
@@ -316,29 +322,37 @@ Tools & Technologies:
 
 Recent Projects:
 
-1. GitMan - GitHub Dorking URL Generator
-- Identify potentially sensitive or exposed data within public GitHub repositories
-- Designed for security researchers, penetration testers, and bug bounty hunters
-- CLI-based tool with flexible GitHub dorking techniques
-- Supports Python-based automation for security research
-➤ Technologies: Python, GitHub Dorking, CLI, Security Research
-➤ GitHub Link: https://github.com/sun272000
+1. Securing Network using Honeypots: A Comparative Study on Honeytrap and T-Pot
+- Two honeypot solutions — Honeytrap and T-Pot — were deployed and implemented in a simulated private network.
+- The objective was to study and compare the following aspects:
+    - Hardware requirements
+    - Installation complexities
+    - Range of emulated services supported
+    - Level of interaction offered by each honeypot
+➤ Technologies: Honeypot, Networking, Tesing, Security Research
+➤ ResearchGate Link: https://tinyurl.com/yuffkp34
 
-2. WA-Spam — WhatsApp, Snapchat, etc Spammer  
-- Send user-typed or auto-generated messages on WhatsApp, Snapchat, and more
-- Random message generation and counting features
-- Flexible spamming options for educational purposes
-- Terminal-based Python tool for automation
-➤ Technologies: Python, CLI, Automation, Terminal Tool
-➤ GitHub Link: https://github.com/sun272000
+2. Network Intrusion Detection System (NIDS) Rule Creation and Testing Lab 
+- A virtualized security lab will be created to simulate a controlled network environment.
+- An open-source Network Intrusion Detection System (NIDS) — such as Snort — will be deployed to monitor network traffic in real time.
+- The NIDS will be configured with custom detection rules to identify specific malicious activities or suspicious behavior.
+- When such activities are detected, the system will generate immediate alerts.
+- These alerts will be sent to security analysts for further investigation and response.
+➤ Technologies: NIDs, Snort, Log analysis, Terminal Tool
+➤ GitHub Link: https://github.com/sun272000/Infotact-Solution-Internship/tree/main/INFOTACT_CS_NIDS_01
 
-3. Tabsye — QR-Based Ordering System
-- Modern restaurant ordering platform using QR codes
-- Live menu updates, order tracking, and inventory management
-- Seamless table orders and optimized restaurant service
-- Web-based interface with Next.js and Tailwind CSS
-➤ Technologies: Next.js, Tailwind CSS, PostgreSQL, Web Security
-➤ Live Demo: https://tabsye.com`;
+3. Threat Intelligence Feed Processor
+- Build a Python-based security tool. The tool will run automatically on a schedule.
+- It will fetch the latest threat data (malicious IPs, domains, and file hashes). Threat data will come from public feeds like:
+    - AbuseIPDB
+    - AlienVault OTX
+- The tool will store the fetched data locally.
+- It will compare these IOCs (Indicators of Compromise) with simulated network or system logs.
+- If any matches are found, the tool will generate alerts.
+- These alerts will help security analysts investigate suspicious activity quickly.
+- The overall goal is to automate threat detection and response in a simulated environment.
+➤ Technologies: Python, AbuseIPDB, Network Security
+➤ Github Link: https://github.com/sun272000/Infotact-Solution-Internship/tree/main/INFOTACT_CS_TIP_03`;
             this.addOutput(projectsContent);
           }
 
@@ -655,7 +669,7 @@ build innovative technology solutions.`;
 
 // Initialize EmailJS
 (function () {
-  emailjs.init("vKxbPXfw618L4ocmy"); // ✅ Replace with your EmailJS public key
+  emailjs.init("IbRjly4zzUcdrFEQ3"); // ✅ Replace with your EmailJS public key
 })();
 
 const contactForm = document.getElementById("contactForm");
