@@ -669,7 +669,7 @@ build innovative technology solutions.`;
 
 // Initialize EmailJS
 (function () {
-  emailjs.init("IbRjly4zzUcdrFEQ3"); // ✅ Replace with your EmailJS public key
+  emailjs.init("zkaU9kkPParxxwUFQ"); // ✅ Replace with your EmailJS public key
 })();
 
 const contactForm = document.getElementById("contactForm");
@@ -686,10 +686,10 @@ if (contactForm) {
     submitBtn.disabled = true;
 
     // 1️⃣ Send notification email (to you)
-    emailjs.sendForm("service_va4luii", "template_hv8vo3e", this)
+    emailjs.sendForm("service_vh6c30s", "template_hv8vo3e", this)
       .then(() => {
         // 2️⃣ Send auto-reply email (to user)
-        return emailjs.sendForm("service_va4luii", "template_l8huu3j", this);
+        return emailjs.sendForm("service_vh6c30s", "template_l8huu3j", this);
       })
       .then(() => {
         alert("✅ Message sent successfully! An auto-reply has been sent to your inbox.");
