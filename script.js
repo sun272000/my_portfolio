@@ -361,9 +361,8 @@ Address:      192.168.119.12
 Availability: Currently available for freelance projects
 
 Social:
-- GitHub:     https://tinyurl.com/p8txj8j2
-- LinkedIn:   https://tinyurl.com/3m4hfadw
-- facebook:   https://tinyurl.com/2dv2xny7
+- GitHub:     github.com/sun272000
+- LinkedIn:   linkedin.com/in/sandip-biswa-636b85142/
 
 
 Let's work together to secure your digital assets and 
@@ -573,8 +572,9 @@ build innovative technology solutions.`;
             if (!textElement) return;
 
             const texts = [
-              "Full-Stack Developer",
-              "Web Security & Penetration Tester",
+              "Passionate Cyber Defender",
+              "Specializing in Digital Forensics & Cybersecurity",
+              "Devoted to Building Secure Digital Futures",
             ];
             let textIndex = 0;
             let charIndex = 0;
