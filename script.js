@@ -685,11 +685,11 @@ if (contactForm) {
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
     submitBtn.disabled = true;
 
-    // 1️⃣ Send notification email (to you)
-    emailjs.sendForm("service_vh6c30s", "template_hv8vo3e", this)
+    // 1️⃣ Send notification email (to you) using the "Contact Us" template
+    emailjs.sendForm("service_vh6c30s", "template_l8huu3j", this)     // for the contact_us form
       .then(() => {
-        // 2️⃣ Send auto-reply email (to user)
-        return emailjs.sendForm("service_vh6c30s", "template_l8huu3j", this);
+        // 2️⃣ Send auto-reply email (to user) using the "Auto-Reply" template
+        return emailjs.sendForm("service_vh6c30s", "template_hv8vo3e", this);     //for the Auto-reply form
       })
       .then(() => {
         alert("✅ Message sent successfully! An auto-reply has been sent to your inbox.");
@@ -704,7 +704,6 @@ if (contactForm) {
       });
   });
 }
-
           initAnimations();
         }
 
