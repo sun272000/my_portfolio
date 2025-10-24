@@ -1,4 +1,4 @@
-        /* Shared Variables */
+/* Shared Variables */
         :root {
             --primary: #00FF41;
             --primary-dark: #00D635;
@@ -356,6 +356,11 @@
         .gui-interface {
             display: none;
         }
+        
+        /* Add padding for fixed header on sub-pages */
+        main {
+          padding-top: 80px; /* Height of your header */
+        }
 
         /* Container */
         .container {
@@ -427,6 +432,11 @@
         .nav-links a.active::after {
             width: 100%;
             box-shadow: var(--glow);
+        }
+        
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary); /* Highlight active link color */
         }
 
         .hamburger {
@@ -1083,63 +1093,170 @@
         }
 
         /* Footer */
-        footer {
-            background: var(--background);
-            padding: 1rem 0;
-            text-align: center;
-            border-top: 1px solid rgba(0, 255, 65, 0.1);
-        }
+        
+        /* ===== New Footer Styles ===== */
+/* ===== New Footer Styles ===== */
+.new-footer {
+  /* Match header background */
+  background-color: var(--background); /* CHANGED: Was var(--background-alt) */
+  color: var(--text-secondary); /* CHANGED: Was #ffffff */
+  padding: 4rem 0;
+  /* Use the 'Poppins' font you already have loaded */
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7;
+}
 
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+.new-footer .container {
+  max-width: 1400px; /* Make footer container wider */
+}
 
-        .social-links {
-            display: flex;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-            margin-top: 1rem;
+.footer-grid {
+  display: grid;
+  /* Create 5 columns, with the last 2 being slightly wider */
+  grid-template-columns: repeat(3, 1fr) 1.2fr 1.2fr;
+  gap: 2.5rem;
+}
 
-        }
+.footer-column {
+  font-size: 0.9rem;
+}
 
-        .social-links a {
-            color: var(--text-secondary);
-            font-size: 1.5rem;
-            transition: var(--transition);
-            cursor: pointer;
-        }
+.footer-column h4 {
+  color: var(--primary); /* CHANGED: Was #ffffff */
+  font-size: 1rem; /* 16px */
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  /* This adds the partial border under the heading */
+  position: relative;
+  display: inline-block;
+}
 
-        .social-links a:hover {
-            color: var(--primary);
-            transform: translateY(-3px);
-        }
+.footer-column h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--primary); /* CHANGED: Was rgba(255, 255, 255, 0.5) */
+}
 
-        .footer-links {
-            display: flex;
-            gap: 2rem;
-            margin-bottom: 1rem;
-        }
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-        .footer-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: var(--transition);
-            cursor: pointer;
-            font-size: 0.9rem;
-        }
+.footer-column li {
+  margin-bottom: 0.75rem;
+}
 
-        .footer-links a:hover {
-            color: var(--primary);
-        }
+.footer-column a {
+  color: var(--text-primary); /* CHANGED: Was #e0e0e0 */
+  text-decoration: none;
+  transition: var(--transition);
+}
 
-        .copyright {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            border-top: 1px solid rgba(0, 255, 65, 0.1);
-            padding-top: 1rem;
-        }
+.footer-column a:hover {
+  color: var(--primary); /* CHANGED: Was #ffffff */
+  text-decoration: none; /* CHANGED: Was underline */
+  padding-left: 0px; /* CHANGED: Was 5px */
+}
+
+/* Specific list for contact icons */
+.footer-column .contact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.footer-column .contact-list i {
+  margin-top: 5px;
+  color: var(--primary); /* CHANGED: Was #ffffff */
+}
+
+.footer-column .contact-list span {
+  color: var(--text-primary); /* CHANGED: Was #e0e0e0 */
+}
+
+/* Social icons in the style of your example */
+.footer-social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--text-secondary); /* CHANGED: Was #ffffff */
+  border-radius: 50%;
+  color: var(--text-primary); /* CHANGED: Was #ffffff */
+  font-size: 1.1rem;
+  transition: var(--transition);
+}
+
+.footer-social-icons a:hover {
+  background-color: var(--primary); /* CHANGED: Was #ffffff */
+  color: var(--background); /* CHANGED: Was #7f8cbb */
+  border-color: var(--primary); /* ADDED for consistency */
+  text-decoration: none;
+  transform: scale(1.1);
+  padding-left: 0; /* Override default link hover */
+}
+
+.footer-copyright {
+  font-size: 0.9rem;
+  color: var(--text-secondary); /* CHANGED: Was #e0e0e0 */
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 255, 65, 0.2); /* CHANGED: Was rgba(255, 255, 255, 0.2) */
+}
+
+/* ===== Responsive Grid for Footer ===== */
+@media (max-width: 992px) {
+  .footer-grid {
+    /* 3 columns on tablet */
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    /* 2 columns on mobile */
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .new-footer {
+    text-align: center; /* Center all text */
+  }
+  
+  .footer-grid {
+    /* 1 column on small mobile */
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .footer-column h4 {
+    display: inline-block; /* Allows centering */
+  }
+
+  .footer-column .contact-list li {
+    justify-content: center; /* Center contact items */
+  }
+  
+  .footer-social-icons {
+    justify-content: center; /* Center social icons */
+  }
+}
 
         /* Animations */
         @keyframes fadeIn {
@@ -1161,6 +1278,195 @@
             0% { opacity: 0; transform: translateX(-50%) translateY(0); }
             50% { opacity: 1; }
             100% { opacity: 0; transform: translateX(-50%) translateY(16px); }
+        }
+        
+        /* ===== NEW STYLES START HERE ===== */
+        
+        /* Dashboard Styles */
+        #dashboard {
+          padding: var(--section-spacing) 0;
+          background: var(--background-alt); /* Match skills section bg */
+        }
+
+        .dashboard-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 2rem;
+        }
+
+        .dashboard-widget {
+          background: var(--background); /* Darker background */
+          border: 1px solid rgba(0, 255, 65, 0.1); /* Subtle green border */
+          border-radius: var(--border-radius);
+          padding: 2rem;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .dashboard-widget h3 {
+          font-size: 1.5rem;
+          color: var(--primary); /* Primary green color */
+          margin-bottom: 1rem;
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+        }
+
+        .dashboard-widget .widget-description {
+          color: var(--text-secondary); /* */
+          font-size: 0.9rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .dashboard-widget .widget-list {
+          list-style: none;
+          margin-bottom: 1.5rem;
+          flex-grow: 1;
+        }
+
+        .dashboard-widget .widget-list li {
+          color: var(--text-primary); /* */
+          margin-bottom: 0.8rem;
+          display: flex;
+          align-items: center;
+          gap: 0.8rem;
+        }
+
+        .dashboard-widget .widget-list li i {
+          color: var(--primary); /* */
+          font-size: 1.1rem;
+          width: 20px;
+          text-align: center;
+        }
+
+        .dashboard-widget .widget-btn {
+          margin-top: auto; /* Pushes button to bottom */
+          text-align: center;
+        }
+
+        .dashboard-stats {
+          gap: 1rem !important; /* Override hero-stats gap */
+        }
+        .dashboard-stats .stat-item {
+          flex-grow: 1; /* Make stats fill the space */
+          padding: 1rem;
+        }
+
+        /* Achievements & Experience Page Styles */
+        #achievements-experience {
+          padding: var(--section-spacing) 0;
+        }
+
+        .achievements-content {
+          max-width: 900px;
+          margin: 0 auto;
+          display: grid;
+          gap: 4rem;
+        }
+
+        .achievement-category h3 {
+          font-size: 1.8rem;
+          color: var(--primary); /* */
+          margin-bottom: 2.5rem;
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          border-bottom: 1px solid rgba(0, 255, 65, 0.2); /* */
+          padding-bottom: 1rem;
+        }
+
+        /* Timeline for Experience */
+        .timeline {
+          position: relative;
+          padding-left: 30px;
+          border-left: 2px solid var(--primary); /* */
+        }
+
+        .timeline-item {
+          position: relative;
+          margin-bottom: 2.5rem;
+        }
+
+        .timeline-item:last-child {
+          margin-bottom: 0;
+        }
+
+        .timeline-dot {
+          position: absolute;
+          left: -40px;
+          top: 5px;
+          width: 18px;
+          height: 18px;
+          background: var(--primary); /* */
+          border-radius: 50%;
+          border: 4px solid var(--background); /* Use main bg */
+          box-shadow: 0 0 10px rgba(0, 255, 65, 0.5); /* */
+        }
+        
+        /* Fix for timeline dot on different bg */
+        #achievements-experience {
+            background: var(--background);
+        }
+        #achievements-experience .timeline-dot {
+            border-color: var(--background);
+        }
+
+
+        .timeline-content h4 {
+          font-size: 1.3rem;
+          color: var(--text-primary); /* */
+          margin-bottom: 0.3rem;
+        }
+
+        .timeline-content h5 {
+          font-size: 1rem;
+          color: var(--primary); /* */
+          margin-bottom: 0.8rem;
+          font-weight: 500;
+        }
+
+        .timeline-content p {
+          color: var(--text-secondary); /* */
+          font-size: 1rem;
+        }
+
+        /* Grid for Certifications */
+        .cert-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 1.5rem;
+        }
+
+        .cert-item {
+          background: var(--background-alt); /* */
+          border: 1px solid rgba(0, 255, 65, 0.1); /* */
+          border-radius: var(--border-radius);
+          padding: 2rem 1.5rem;
+          text-align: center;
+          transition: var(--transition); /* */
+        }
+
+        .cert-item:hover {
+          transform: translateY(-5px);
+          box-shadow: var(--glow); /* */
+          border-color: var(--primary);
+        }
+
+        .cert-item i {
+          font-size: 2.5rem;
+          color: var(--primary); /* */
+          margin-bottom: 1rem;
+        }
+
+        .cert-item h4 {
+          font-size: 1.1rem;
+          color: var(--text-primary); /* */
+          margin-bottom: 0.3rem;
+        }
+
+        .cert-item p {
+          font-size: 0.9rem;
+          color: var(--text-secondary); /* */
         }
 
         /* Responsive */
@@ -1217,7 +1523,7 @@
             
             .nav-links {
                 position: fixed;
-                top: 80px;
+                top: 80px; /* Match header height */
                 left: -100%;
                 width: 100%;
                 height: calc(100vh - 80px);
@@ -1278,6 +1584,16 @@
             .ascii-art {
                 font-size: 0.9rem;
             }
+            
+            /* Achievements */
+            .timeline {
+                padding-left: 20px;
+            }
+            .timeline-dot {
+                left: -30px;
+                width: 16px;
+                height: 16px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -1307,7 +1623,7 @@
             }
             
             .nav-links {
-                top: 70px;
+                top: 70px; /* Adjust if header height changes */
                 height: calc(100vh - 70px);
             }
 
@@ -1332,5 +1648,9 @@
             
             .ascii-art {
                 font-size: 0.8rem;
+            }
+            
+            .cert-grid {
+                grid-template-columns: 1fr;
             }
         }

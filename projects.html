@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | b1swa</title>
+    <meta
+      name="description"
+      content="Passionate Cyber Defender | Specializing in Digital Forensics & Cybersecurity | Devoted to Building Secure Digital Futures"
+    />
+    <meta
+      name="keywords"
+      content="Passionate Cyber Defender | Specializing in Digital Forensics & Cybersecurity | Devoted to Building Secure Digital Futures"
+    />
+    <meta name="theme-color" content="#00FF00" />
+    <meta
+      property="og:title"
+      content="b1swa | Security Specialist"
+    />
+    <meta
+      property="og:description"
+      content="Security Specialist, Developer, and Technology Leader"
+    />
+    <meta property="og:type" content="website" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%2300FF41' d='M4 4h16v2H4zm0 4h16v2H4zm0 4h16v2H4zm0 4h16v2H4z'/%3E%3C/svg%3E"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Source+Code+Pro:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas class="matrix-bg" id="matrixCanvas"></canvas>
+   <div class="common-loader" id="commonLoader">
+      </div>
+
+    <div class="view-selector" id="viewSelector" style="display: none;">
+      </div>
+
+    <div class="terminal-interface terminal-mode" id="terminalInterface">
+      </div> 
+    <div class="gui-interface gui-mode" id="guiInterface" style="display: block;">
+      <header id="header-placeholder"></header>
+
+      <main>
+        <section id="projects">
+          <div class="container">
+            <div class="section-title">
+              <h2>Projects</h2>
+              <p>Some of my recent work</p>
+            </div>
+            <div class="projects-grid">
+              <div class="project-card">
+                <div class="project-img">
+                  <img
+                    src="https://tinyurl.com/43fe6vw2"
+                    alt="Securing Network using Honeypots: A Comparative Study on Honeytrap and T-Pot"
+                  />
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">
+                    Securing Network using Honeypots: A Comparative Study on Honeytrap and T-Pot
+                  </h3>
+                  <p class="project-description">
+                    Two honeypot solutions, namely Honeytrap and T-Pot were deployedand 
+                    implemented in the simulated private network to study the hardware 
+                    requirements,installation complexities, range of emulated services 
+                    supported, and the level of their in-teraction.  
+                  </p>
+                  <div class="project-tech">
+                    <span>Honeypot</span>
+                    <span>Networking</span>
+                    <span>Testing</span>
+                    <span>Security Research</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="https://tinyurl.com/yuffkp34"
+                      ><i class="fa-brands fa-researchgate"></i>ResearchGate</a
+                    >
+                    
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-card">
+                <div class="project-img">
+                  <img
+                    src="https://tinyurl.com/pzmashp2"
+                    alt="NIDS Rule Creation and Testing Lab"
+                  />
+                </div>
+
+                <div class="project-content">
+                  <h3 class="project-title">Network Intrusion Detection System (NIDS) Rule Creation and Testing Lab</h3>
+
+                  <p class="project-description">
+                  Create a virtualized security lab where an open-source NIDS like Snort 
+                  is deployed to monitor network traffic. The system will be 
+                  configured with custom rules designed to detect specific malicious activities and
+                  providing immediate alerts to security analysts for investigation.
+                  </p>
+
+                  <div class="project-tech">
+                    <span>NIDs</span>
+                    <span>Snort</span>
+                    <span>log analysis</span>
+                    <span>Terminal Tool</span>
+                  </div>
+
+                  <div class="project-links">
+                    <a
+                      href="https://github.com/sun272000/Infotact-Solution-Internship/tree/main/INFOTACT_CS_NIDS_01"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a
+                      href="https://github.com/sun272000/Infotact-Solution-Internship/blob/main/INFOTACT_CS_NIDS_01/assets/Internship%20Report%232%20.pdf"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <i class="fas fa-book"></i> Readme
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-card">
+                <div class="project-img">
+                  <img
+                    src="https://tinyurl.com/5fu743up"
+                    alt="Threat Intelligence Feed Processor"
+                  />
+                </div>
+
+                <div class="project-content">
+                  <h3 class="project-title">Threat Intelligence Feed Processor</h3>
+
+                  <p class="project-description">
+                    Build a Python-based tool that runs on a schedule, fetches 
+                    the latest threat data (malicious IPs, domains, file hashes) 
+                    from public feeds like AbuseIPDB and AlienVault OTX, and stores 
+                    it locally. The tool will then compare these IOCs against simulated 
+                    network or system logs to find matches, generating alerts for any 
+                    suspicious activity
+                  </p>
+
+                  <div class="project-tech">
+                    <span>Python</span>
+                    <span>AbuseIPDB</span>
+                    <span>Network Security</span>
+                  </div>
+
+                  <div class="project-links">
+                    <a
+                      href="https://github.com/sun272000/Infotact-Solution-Internship/tree/main/INFOTACT_CS_TIP_03"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a
+                      href="https://github.com/sun272000/Infotact-Solution-Internship/blob/main/INFOTACT_CS_TIP_03/assets/Internship%20Report%233.1.pdf"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <i class="fas fa-book"></i> Readme
+                    </a>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+       <footer id="footer-placeholder"></footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  </body>
+</html>
